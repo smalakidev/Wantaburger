@@ -1,2 +1,2 @@
-# wantaburger
+# wantmyburger
 The Burger App
