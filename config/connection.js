@@ -1,3 +1,4 @@
+
 const mysql = require('mysql');
 const chalk = require('chalk');
 require("dotenv").config();
@@ -9,11 +10,11 @@ if (process.env.JAWSDB_URL) {
 else {
 //This is the connection to local host
 connection = mysql.createConnection({
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB
+    host: process.env.DB_HOST || '127.0.0.1',
+    port: process.env.DB_PORT || "3306",
+    user: process.env.DB_USER || "root",
+    password: process.env.DB_PASSWORD || "1?qK10!+",
+    database: process.env.DB || "burgers_db",
   });
 }
 connection.connect(function (err) {
