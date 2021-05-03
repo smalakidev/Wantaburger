@@ -18,3 +18,28 @@ router.get("/", function (req, res) {
         console.log(chalk.yellowBright.black("error"));
     }
 });
+//.Post route for the burger
+router.post("/api/burger", function (req, res) {
+    try {
+        return burger.insertOne("burger", req.body.burgername, true).then(function (data) {
+            res.json({ id: data?.insertId });
+        });
+    }
+    catch
+    {
+        console.log(chalk.yellowBright.black("error"));
+    }
+});
+//.put for the burger
+router.put("/api/burger/:id", function (req, res) {
+    try {
+        return burger.updateOne("burger", false, req.params.id).then(function (data) {
+            res.json({ id: data?.insertId });
+        });
+    }
+    catch
+    {
+        console.log(chalk.yellowBright.black("error"));
+    }
+});
+module.exports = router;
