@@ -12,4 +12,29 @@ const burger = {
                         console.log(chalk.yellowBright.black("error"));
                 }
         },
-        
+        //Insert records into burger table
+        insertOne: async function (table, oneValue, twoValue) {
+            try {
+
+                    const result = await orm.insertOne(table, oneValue, twoValue);
+                    return (result);
+            }
+            catch
+            {
+                    console.log(chalk.yellowBright.black("error"));
+            }
+    },
+    //Update the records in the burger table
+    updateOne: async function (table, whereValue, idValue) {
+            try {
+
+                    const result = await orm.updateOne(table, whereValue, idValue);
+                    return (result);
+            }
+            catch
+            {
+                    console.log(chalk.yellowBright.black("error"));
+            }
+    }
+};
+module.exports = burger; 
