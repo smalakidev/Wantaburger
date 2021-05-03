@@ -1,0 +1,62 @@
+body
+{
+    background-color: pink
+}
+/*used rem in place of pixels for this part of the code*/
+.burgerpics
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40rem;
+    height: 40rem;
+   
+}
+
+#title
+{
+    color: white;
+    text-align: center;
+}
+
+#burgername
+{
+    height: 60px;
+    width: 280px;
+}
+
+#devour
+{
+    display: none;
+}
+
+#notdevour
+{
+    display: none;
+}
+
+.wait
+{
+    background-color: wheat;
+    height: 30px;
+    margin-bottom: 5px;
+    float: left;
+    width: 230px;
+    margin-right: 3px;
+}
+
+.nowait
+{
+    background-color: white;
+    color: rgb(238, 115, 115);
+    height: 25px;
+    margin-bottom: 1px;
+    float: left;
+    width: 230px;
+    margin-right: 3px;
+}
+
+.list
+{
+    list-style-type: none;
+}
