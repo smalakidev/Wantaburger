@@ -3,7 +3,7 @@ const burger = require('../models/burger');
 const router = express.Router();
 const chalk = require('chalk');
 
-//This selects all the values from the burger table
+//Select all the values from the burger table
 router.get("/", function (req, res) {
     try {
         return burger.selectAll("burger").then(function (data) {
@@ -18,7 +18,7 @@ router.get("/", function (req, res) {
         console.log(chalk.yellowBright.black("error"));
     }
 });
-//.Post route for the burger
+//Insert a new burger
 router.post("/api/burger", function (req, res) {
     try {
         return burger.insertOne("burger", req.body.burgername, true).then(function (data) {
@@ -30,7 +30,7 @@ router.post("/api/burger", function (req, res) {
         console.log(chalk.yellowBright.black("error"));
     }
 });
-//.put for the burger
+//Update the burger devour value
 router.put("/api/burger/:id", function (req, res) {
     try {
         return burger.updateOne("burger", false, req.params.id).then(function (data) {
