@@ -1,0 +1,49 @@
+<!---->
+<div class="container">
+   <img src="/assets/images/burger5.png" class="burgerpics">
+    <h1 id="title">Want my Burger?</h1>
+</div>
+<div class="container">
+    <div class="row">        
+        <div class="col-lg-4"><ol>
+            {{#each burger}}
+            {{#if devoured}}
+            <div class='row'>
+                <div class='col-lg-12'>
+                    <li class='list'>
+                        <p class='wait'>{{this.id}}. {{this.burger_name}}</p>
+                        <button class='check' data-id="{{this.id}}">Chow down now!</button>
+                        </li>
+                        </div>
+                        </div>
+            {{/if}}
+            {{/each}}
+        </ol>
+        </div>
+        <div class="col-lg-4">                    
+<form id="burger" style="text-align: center;">
+    <textarea id="burgername" name="burgername">
+    </textarea><br>
+    <button type="submit"class="btn btn-primary" id="getData">Oh yeah</button>
+</form>
+<div class="row">
+<div class="col-lg-12">
+    <h6  style="text-align: center;font-weight: bold;">What kinda Burger would you like eat today? Click the "oh yeah" button</h6>
+</div>
+</div>
+    </div>    
+<div class="col-lg-4"><ol>
+     {{#each burger}}
+            {{#unless devoured}}
+            <div class='row'>
+                <div class='col-lg-12'>
+                    <li class='list'>
+                        <p class='nowait'>{{this.id}}. {{this.burger_name}}</p>
+                        </li>
+                        </div>
+                        </div>
+            {{/unless}}
+            {{/each}}
+</ol></div>
+</div>
+</div>
