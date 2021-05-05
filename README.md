@@ -1,7 +1,6 @@
-# My Portfolio
+# My Want My Burger
 
-My Portfolio
-
+Want My Burger App
 ![badge](https://img.shields.io/static/v1?label=license&message=MIT&color=green)
 
 ## Table of contents
@@ -21,7 +20,7 @@ The repository can be cloned if someone wants to use this template for their own
 
 ## Usage
 
-This is a personal portfolio that showcases all my work done.
+This is a burger app that lets the user customize any burger that they want. It is deployed on Heroku
 
 ## License
 
